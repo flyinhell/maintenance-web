@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.SourceDatabaseMappingEntity" table="source_database_mapping" schema="dbo"
+           catalog="opview_task">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+        </id>
+        <property name="type">
+            <column name="type" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="indexName">
+            <column name="index_name" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="source">
+            <column name="source_database" sql-type="varchar(100)" length="100"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.MonthyTaskConfigEntity" table="monthy_task_config" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="databaseType">
+            <column name="database_type" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="databaseAddress">
+            <column name="database_address" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="viewName">
+            <column name="view_name" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+
+        <property name="viewSchema">
+            <column name="view_schema" sql-type="text"  length = "65535"  not-null="true"/>
+        </property>
+        <property name="machineNameList">
+            <column name="machine_name_list" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="module">
+            <column name="module" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="priority">
+            <column name="priority" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="indexType">
+            <column name="index_type" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="customer">
+            <column name="customer" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="sourceType">
+            <column name="source_type" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="contentType">
+            <column name="content_type" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

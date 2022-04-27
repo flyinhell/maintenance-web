@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.CustomIndexInformationEntity" table="custom_index_information" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="minute">
+            <column name="minute" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="hour">
+            <column name="hour" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="day">
+            <column name="day" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="timeoutSecond">
+            <column name="timeout_second" sql-type="int"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

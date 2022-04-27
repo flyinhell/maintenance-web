@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.WhSourceIndexMappingEntity" table="wh_source_index_mapping" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="customer">
+            <column name="customer" sql-type="varchar" length="16" not-null="true"/>
+        </property>
+        <property name="sourceType">
+            <column name="source_type" sql-type="varchar" length="100" not-null="true"/>
+        </property>
+        <property name="indexName">
+            <column name="index_name" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="timeRange">
+            <column name="time_range" sql-type="int" not-null="true"/>
+        </property>
+        <property name="contentType">
+            <column name="content_type" sql-type="varchar" length="100" not-null="true"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="datetime" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.VwIndexSwitchStatusNewEntity" table="vw_index_switch_status_new" schema="dbo">
+        <property name="indexName">
+            <column name="index_name" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="machineName">
+            <column name="machine_name" sql-type="varchar" length="500" not-null="true"/>
+        </property>
+        <property name="indexType">
+            <column name="index_type" sql-type="nvarchar"/>
+        </property>
+        <property name="indexStatus">
+            <column name="index_status" sql-type="nvarchar"/>
+        </property>
+        <property name="targetPath">
+            <column name="target_path" sql-type="nvarchar"/>
+        </property>
+        <property name="actionFlag">
+            <column name="action_flag" sql-type="nvarchar"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar"/>
+        </property>
+        <property name="lastBuildTime">
+            <column name="last_build_time" sql-type="smalldatetime"/>
+        </property>
+        <property name="taskTime">
+            <column name="task_time" sql-type="datetime"/>
+        </property>
+        <property name="checkSwitch">
+            <column name="check_switch" sql-type="varchar" length="5" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

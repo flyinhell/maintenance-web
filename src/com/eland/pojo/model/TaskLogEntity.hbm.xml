@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.TaskLogEntity" table="task_log" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar"/>
+        </property>
+        <property name="targetPath">
+            <column name="target_path" sql-type="nvarchar"/>
+        </property>
+        <property name="actionFlag">
+            <column name="action_flag" sql-type="nvarchar"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar"/>
+        </property>
+        <property name="taskStartTime">
+            <column name="task_start_time" sql-type="datetime"/>
+        </property>
+        <property name="taskEndTime">
+            <column name="task_end_time" sql-type="datetime"/>
+        </property>
+    </class>
+</hibernate-mapping>

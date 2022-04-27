@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.IndexInspectorStatusEntity" table="index_inspector_status" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="site">
+            <column name="site" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="indexType">
+            <column name="index_type" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="lastPostTime">
+            <column name="last_post_time" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="issueType">
+            <column name="issue_type" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="repairStatus">
+            <column name="repair_status" sql-type="nvarchar" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

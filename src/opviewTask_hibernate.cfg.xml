@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlserver://10.20.20.1:1433;database=opview_task</property>
+        <!--<property name="connection.url">jdbc:sqlserver://dc-api01:1433;databaseName=opview_task</property>-->
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="connection.username">sa</property>
+        <property name="connection.password">eland4321</property>
+        <!--<property name="connection.password">eland1234</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>
+
+        <!--c3p0 Thread Pool -->
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.max_size">20</property><!-- 最大連接數-->
+        <property name="hibernate.c3p0.min_size">5</property><!-- 最小連接數-->
+        <property name="hibernate.c3p0.timeout">120</property><!-- 獲得連接的超時時間,如果超過這個時間,會拋出異常，單位毫秒-->
+        <property name="hibernate.c3p0.max_statements">100</property><!-- 最大的PreparedStatement的數量-->
+        <property name="hibernate.c3p0.idle_test_period">120</property><!-- 每隔120秒檢查連接池裡的空閒連接，單位是秒-->
+        <property name="hibernate.c3p0.acquire_increment">2</property><!-- 當連接池裡面的連接用完的時候，C3P0一下獲取的新的連接數-->
+        <property name="hibernate.c3p0.validate">true</property>
+
+        <mapping resource="com/eland/pojo/model/ApiIndexStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/BuildFailRecordsEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/ClonerStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/CustomIndexInformationEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IncrementalIndexStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IncrementalIndexStatusLogEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexLogEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexMachineMappingEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexTaskInformationEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexRollbackTaskEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/TaskEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/TaskLogEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/VwClonerStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/WhSourceIndexMappingEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/VwSwitchStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/VwIndexSwitchStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/AccountEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/MonthyTaskConfigEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/MonthyCheckErrorLogEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/MonthyTaskMachineCheckEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/MonthyTaskCheckEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/MachineTypeMappingEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexInspectorStatusEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexInformationEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/IndexInspectorConfigEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/SourceDatabaseMappingEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/CustomIndexCopyTaskEntity.hbm.xml"/>
+
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+
+    </session-factory>
+</hibernate-configuration>

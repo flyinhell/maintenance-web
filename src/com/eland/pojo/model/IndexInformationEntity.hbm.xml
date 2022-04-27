@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.IndexInformationEntity" table="index_information" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="indexType">
+            <column name="index_type" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="dateRange">
+            <column name="date_range" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="databaseType">
+            <column name="database_type" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="databaseAddress">
+            <column name="database_address" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="viewName">
+            <column name="view_name" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="pType2">
+            <column name="p_type_2" sql-type="nvarchar" />
+        </property>
+    </class>
+</hibernate-mapping>

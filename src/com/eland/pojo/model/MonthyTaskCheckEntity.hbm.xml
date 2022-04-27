@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.MonthyTaskCheckEntity" table="monthy_task_check" schema="dbo">
+        <id name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="machineMappingStatus">
+            <column name="machine_mapping_status" sql-type="int"/>
+        </property>
+        <property name="sourceMappingStatus">
+            <column name="source_mapping_status" sql-type="nvarchar"/>
+        </property>
+        <property name="p2pStatus">
+            <column name="P2P_status" sql-type="int"/>
+        </property>
+        <property name="tempIndexStatus">
+            <column name="tempIndex_status" sql-type="int"/>
+        </property>
+        <property name="tspsdkStatus">
+            <column name="TSPSDK_status" sql-type="nvarchar"/>
+        </property>
+        <property name="viewStatus">
+            <column name="view_status" sql-type="nvarchar"/>
+        </property>
+        <property name="checkTime">
+            <column name="check_time" sql-type="datetime"/>
+        </property>
+        <property name="month">
+            <column name="month" sql-type="nvarchar"/>
+        </property>
+    </class>
+</hibernate-mapping>

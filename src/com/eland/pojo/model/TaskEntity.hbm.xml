@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.TaskEntity" table="task" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="machineName">
+            <column name="machine_name" sql-type="nvarchar"/>
+        </property>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar"/>
+        </property>
+        <property name="targetPath">
+            <column name="target_path" sql-type="nvarchar"/>
+        </property>
+        <property name="actionFlag">
+            <column name="action_flag" sql-type="nvarchar"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar"/>
+        </property>
+        <property name="taskTime">
+            <column name="task_time" sql-type="datetime"/>
+        </property>
+        <property name="machineWeight">
+            <column name="machine_weight" sql-type="int"/>
+        </property>
+        <property name="indexWeight">
+            <column name="index_weight" sql-type="int"/>
+        </property>
+        <property name="errorNum">
+            <column name="error_num" sql-type="int"/>
+        </property>
+    </class>
+</hibernate-mapping>

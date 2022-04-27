@@ -1,0 +1,267 @@
+@charset "utf-8";
+/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ *
+ * Licensed under the MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+body {
+  /*font: 13px/20px  "新細明體", "Lucida Grande", Tahoma, Verdana, sans-serif;*/
+}
+
+header {
+  padding-top: 0px;
+  /*background: #fff;*/
+  /*border-bottom: 1px solid #dadada;*/
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);
+  position:absolute;
+  left:180px;
+}
+
+nav {
+  height: 70px;
+  /*background:#273e5a url(../images/nav-bg.png) 0 0 repeat-x;*/
+  /*border-bottom: 5px solid white;*/
+  -webkit-box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+}
+
+#header .nav {
+ /* margin: 0 auto;*/
+  margin:0;
+  padding-top:0px;
+}
+#header .nav a {
+  display: block;
+  text-decoration: none;
+}
+#header .nav > li {
+  float: left;
+  margin-right: -1px;
+}
+#header .nav > li > a {
+  height: 65px;
+  line-height: 40px;
+  padding: 0 20px;
+  font-weight: normal;
+  color: #d5efff;
+  text-decoration: none;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+  background: #152f4d url(../images/navBtn-bg.png) repeat-x;
+  border-radius: 0px 0px 0 0;
+	/*background-image: -webkit-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: -moz-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: -o-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: linear-gradient(to bottom, #57b2ea, #1e95e0);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0px 2px rgba(0, 0, 0, 0.9), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0px 2px rgba(0, 0, 0, 0.9), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.02);*/
+}
+#header .nav > li > a:hover {
+  text-decoration: none;
+  background: #85a6b8;
+  background-image: -webkit-linear-gradient(top, #afc5d1, #85a6b8);
+  background-image: -moz-linear-gradient(top, #afc5d1, #85a6b8);
+  background-image: -o-linear-gradient(top, #afc5d1, #85a6b8);
+  background-image: linear-gradient(to bottom, #afc5d1, #85a6b8);
+}
+#header .nav > li.active > a, #header .nav > li > a:active, #header .nav > .dropdown:hover > a {
+  background: #1d91da url(../images/navBtn-bg-hover.png) repeat-x;
+  color: #ffffff;
+  text-shadow: none;
+  /*-webkit-box-shadow: 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);*/
+}
+#header .nav a.icon {
+  position: relative;
+  width: 40px;
+  padding: 0;
+}
+#header .nav a.icon > span {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+#header .nav a.icon.home > span {
+  background-image: url("../img/home.png");
+}
+
+#header .nav .active a.icon > span, #header .nav a.icon:hover > span, #header .nav a.icon:active > span {
+  background-position: 0 -16px;
+}
+
+.dropdown {
+  position: relative;
+  border-bottom: 5px solid #0c89d8;
+}
+.dropdown:hover ul {
+  display: block;
+  z-index:10;
+}
+.dropdown ul {
+  display: none;
+  margin-left:0;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  min-width: 160px;
+  padding: 0 0 5px;
+  background: #0c89d8;
+  border: 1px solid #0868a4;
+  border-top: 0;
+  border-radius: 0 0 3px 3px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);
+}
+.dropdown ul.large {
+  min-width: 200px;
+}
+.dropdown li {
+  display: block;
+  margin: 0 18px;
+  overflow: visible;
+}
+.dropdown li:hover {
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  /*background-image: -webkit-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: -moz-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: -o-linear-gradient(top, #57b2ea, #1e95e0);
+  background-image: linear-gradient(to bottom, #57b2ea, #1e95e0);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 -2px 2px rgba(0, 0, 0, 0.03), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 -2px 2px rgba(0, 0, 0, 0.03), 0 2px white, 0 0 2px rgba(0, 0, 0, 0.2);*/
+}
+.dropdown li + li {
+  border-top: 1px solid #0c77ba;
+}
+.dropdown li a {
+  color: #fff;
+  height:40px;
+  line-height:40px;
+  padding: 2px 10px;
+  margin: 0 -10px;
+  font-family:'微軟正黑體','新細明體';
+  font-size:14px;
+  font-weight:bold;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -webkit-transition:all .2s ease-in-out;
+}
+.dropdown li a:hover {
+  /*color: #ffcc00;*/
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-size:14px;
+  background:#096dac;
+  background:rgba(0,0,0,.2);
+  *background: none;
+  margin:0 -18px;
+  padding:2px 15px;
+}
+
+/**/
+#header .nav a.nav-icon {
+  position: relative;
+  text-align:center;
+  padding: 0 32px;
+  font-family:'微軟正黑體','新細明體';
+  font-size:14px;
+  relative:bold;
+  *width:32px;
+}
+#header .nav a.nav-icon > b {
+  font-size: 13px;
+  position:absolute;
+  display:block;
+  width:83px;
+  text-alignl: center;
+  left:8px;
+  top:44px;
+  line-height:100%;
+}
+#header .nav a.nav-icon > span {
+  position:relative;
+  margin:0 auto;
+  display:block;
+  top: 7px;
+  left: 0px;
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+  vertical-align: middle;
+  *vertical-align: middle;
+}
+#header .nav a.nav-icon.view > span {
+  background: url(../images/icons/nav-icons.png) 0px 0px;
+}
+#header .nav a.nav-icon.socialImpact > span {
+  background: url(../images/icons/nav-icons.png) -32px 0;
+}
+#header .nav a.nav-icon.statistics > span {
+  background: url(../images/icons/nav-icons.png) -64px 0;
+}
+#header .nav a.nav-icon.analysis > span {
+  background: url(../images/icons/nav-icons.png) -96px 0;
+}
+#header .nav a.nav-icon.manage > span {
+  background: url(../images/icons/nav-icons.png) -128px 0;
+}
+#header .nav .hover a.nav-icon > span, #header .nav a.nav-icon:hover > span, #header .nav a.nav-icon:active > span {
+  opacity:1;
+}
+.dropdown:hover a.nav-icon > span {
+  opacity:1;
+}
+
+/* ====== Opview 3.2 ADD CSS SET ====== */
+.navEndLine	{ width:2px; height:70px; margin-left:1px; background:url(../images/navBtn-bg.png) repeat-x;}
+.dropdown li a i		{ display:inline-block; width:32px; transition:all .1s ease-in-out; -moz-transition:all .1s ease-in-out; -webkit-transition:all .1s ease-in-out;}
+  .dropdown li a:hover i	{ font-size:28px; vertical-align:-5px;}
+
+/* nav Hover SET*/
+#header .nav a.nav-icon.view:hover > span {
+  background: url(../images/icons/nav-icons.png) 0px -32px;
+}
+#header .nav a.nav-icon.socialImpact:hover > span {
+  background: url(../images/icons/nav-icons.png) -32px -32px;
+}
+#header .nav a.nav-icon.statistics:hover > span {
+  background: url(../images/icons/nav-icons.png) -64px -32px;
+}
+#header .nav a.nav-icon.analysis:hover > span {
+  background: url(../images/icons/nav-icons.png) -96px -32px;
+}
+#header .nav a.nav-icon.manage:hover > span {
+  background: url(../images/icons/nav-icons.png) -128px -32px;
+}
+ 
+/* dropdown Hover NAV icon */
+.dropdown:hover a.nav-icon.view > span {
+  background: url(../images/icons/nav-icons.png) 0px -32px;
+}
+.dropdown:hover a.nav-icon.socialImpact > span {
+  background: url(../images/icons/nav-icons.png) -32px -32px;
+}
+.dropdown:hover a.nav-icon.statistics > span {
+  background: url(../images/icons/nav-icons.png) -64px -32px;
+}
+.dropdown:hover a.nav-icon.analysis > span {
+  background: url(../images/icons/nav-icons.png) -96px -32px;
+}
+.dropdown:hover a.nav-icon.manage > span {
+  background: url(../images/icons/nav-icons.png) -128px -32px;
+}

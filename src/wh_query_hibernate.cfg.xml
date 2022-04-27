@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mariadb://10.20.20.232:3306/wh_query?useUnicode=true&amp;characterEncoding=utf-8</property>
+        <!--<property name="connection.url">jdbc:sqlserver://dc-api01:1433;databaseName=opview_task</property>-->
+        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">eland4321</property>
+        <!--<property name="connection.password">eland1234</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        
+
+        <!--c3p0 Thread Pool -->
+        <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+        <property name="hibernate.c3p0.max_size">20</property><!-- 最大連接數-->
+        <property name="hibernate.c3p0.min_size">5</property><!-- 最小連接數-->
+        <property name="hibernate.c3p0.timeout">120</property><!-- 獲得連接的超時時間,如果超過這個時間,會拋出異常，單位毫秒-->
+        <property name="hibernate.c3p0.max_statements">100</property><!-- 最大的PreparedStatement的數量-->
+        <property name="hibernate.c3p0.idle_test_period">120</property><!-- 每隔120秒檢查連接池裡的空閒連接，單位是秒-->
+        <property name="hibernate.c3p0.acquire_increment">2</property><!-- 當連接池裡面的連接用完的時候，C3P0一下獲取的新的連接數-->
+        <property name="hibernate.c3p0.validate">true</property>
+
+        <mapping resource="com/eland/pojo/model/WhSourceTypeEntity.hbm.xml"/>
+        <mapping resource="com/eland/pojo/model/WhSourceTypeDevEntity.hbm.xml"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+
+    </session-factory>
+</hibernate-configuration>

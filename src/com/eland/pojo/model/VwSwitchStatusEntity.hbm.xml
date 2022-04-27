@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.VwSwitchStatusEntity" table="vw_switch_status" schema="dbo">
+        <id name="machineName">
+            <column name="machine_name" sql-type="nvarchar" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="targetPath">
+            <column name="target_path" sql-type="nvarchar"/>
+        </property>
+        <!--<property name="machineName">-->
+            <!--<column name="machine_name" sql-type="nvarchar"/>-->
+        <!--</property>-->
+        <property name="taskTime">
+            <column name="task_time" sql-type="datetime"/>
+        </property>
+        <property name="updateTime">
+            <column name="update_time" sql-type="datetime"/>
+        </property>
+        <property name="lastSwitchDate">
+            <column name="last_switch_date" sql-type="char" length="10"/>
+        </property>
+        <property name="switchStatus">
+            <column name="switch_status" sql-type="varchar" length="5" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

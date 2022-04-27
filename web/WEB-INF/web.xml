@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>memberFilter</filter-name>
+        <filter-class>com.eland.filter.memberFilter</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>memberFilter</filter-name>
+        <url-pattern>/Copy/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>memberFilter</filter-name>
+        <url-pattern>/Index/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>memberFilter</filter-name>
+        <url-pattern>/Config/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>memberFilter</filter-name>
+        <url-pattern>/Management/*</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>CopyMainPage</servlet-name>
+        <jsp-file>/copy/copy_main_page.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CopyMainPage</servlet-name>
+        <url-pattern>/Copy/CopyMainPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IndexMainPage</servlet-name>
+        <jsp-file>/index/index_main_page.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexMainPage</servlet-name>
+        <url-pattern>/Index/IndexMainPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchMainPage</servlet-name>
+        <jsp-file>/search/search_main_page.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchMainPage</servlet-name>
+        <url-pattern>/Search/SearchMainPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OperateMainPage</servlet-name>
+        <jsp-file>/operate/operate_main_page.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OperateMainPage</servlet-name>
+        <url-pattern>/Operate/OperateMainPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MonthlyMainPage</servlet-name>
+        <jsp-file>/monthly/monthly_main_page.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MonthlyMainPage</servlet-name>
+        <url-pattern>/Monthly/MonthlyMainPage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManagementMember</servlet-name>
+        <jsp-file>/management/member.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagementMember</servlet-name>
+        <url-pattern>/Management/Member</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManagementMemberEdit</servlet-name>
+        <jsp-file>/management/member_edit.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagementMemberEdit</servlet-name>
+        <url-pattern>/Management/MemberEdit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ManagementMemberAction</servlet-name>
+        <jsp-file>/management/member_action.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ManagementMemberAction</servlet-name>
+        <url-pattern>/Management/MemberAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MemberAccountCheck</servlet-name>
+        <jsp-file>/management/member_account_check.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MemberAccountCheck</servlet-name>
+        <url-pattern>/Management/MemberAccountCheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MemberAccountUpdate</servlet-name>
+        <jsp-file>/management/member_update.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MemberAccountUpdate</servlet-name>
+        <url-pattern>/Management/MemberAccountUpdate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Authenticate</servlet-name>
+        <servlet-class>com.eland.filter.Authenticate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Authenticate</servlet-name>
+        <url-pattern>/Auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogIn</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogIn</servlet-name>
+        <url-pattern>/LogIn</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <jsp-file>/logout.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
+</web-app>

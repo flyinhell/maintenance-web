@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.ApiIndexStatusEntity" table="api_index_status" schema="dbo">
+        <id name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="buildTime">
+            <column name="build_time" sql-type="datetime"/>
+        </property>
+        <property name="buildMillisecond">
+            <column name="build_millisecond" sql-type="nvarchar"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="size">
+            <column name="size" sql-type="nvarchar"/>
+        </property>
+        <property name="records">
+            <column name="records" sql-type="nvarchar"/>
+        </property>
+    </class>
+</hibernate-mapping>

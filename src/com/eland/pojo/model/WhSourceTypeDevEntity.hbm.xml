@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.eland.pojo.model.WhSourceTypeDevEntity" table="wh_source_type_dev" schema="wh_query">
+        <id name="sourceId">
+            <column name="source_id" sql-type="varchar(32)" length="32"/>
+        </id>
+        <property name="sourceName">
+            <column name="source_name" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="pType">
+            <column name="p_type" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="pType2">
+            <column name="p_type_2" sql-type="varchar(45)" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.eland.pojo.model.IndexInspectorConfigEntity" table="index_inspector_config" schema="dbo">
+        <id name="id">
+            <column name="id" sql-type="int identity" not-null="true"/>
+            <generator class="native"></generator>
+        </id>
+        <property name="indexName">
+            <column name="index_name" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="indexType">
+            <column name="index_type" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="immediate">
+            <column name="immediate" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="inspectSwitch">
+            <column name="inspect_switch" sql-type="nvarchar" not-null="true"/>
+        </property>
+        <property name="checkImmediateSql">
+            <column name="check_immediate_sql" sql-type="nvarchar"/>
+        </property>
+
+    </class>
+</hibernate-mapping>
